@@ -1,0 +1,171 @@
+stages:
+  - staging_test
+  # - dev_inner
+  # - dev_external
+  # - hxinbao
+  # - hcombine
+  # - hbudget
+  # - hcrm
+  # - hpower
+  # - htravel
+  # - hincubator
+  # - horder
+  # - hplant
+  # - hmeal
+  - qc
+  - master
+
+运行测试用例:
+  stage: staging_test
+  script: 
+    - echo "进行相关的测试"
+    - echo "测试通过"
+    - echo "完成测试"
+
+
+# 部署Develop内网环境::
+#   stage: dev_inner
+#   script:
+#     - echo "部署 Develop 到内网服务器"
+#     - export SUPER_MODEL_SUPER_WEB_API=http://supermodel_super_api.honray.cc/
+#     - cd /home/gitlab-runner/common/frontend && ./staging.sh 
+#     - echo "成功部署到测试服务器"
+#   only:
+#   - develop
+
+# 部署Develop外网环境::
+#   stage: dev_external
+#   script:
+#     - echo "部署 develop 分支到外网环境"
+#     - export PROJECT_NAME=DEVELOP
+#     - export SUPER_MODEL_SUPER_WEB_API=http://develop_super_api.ruizhutech.com/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+#     - echo "成功部署到外网服务器"
+#   only:
+#   - develop
+
+
+# 部署到 CRM 项目:
+#   stage: hcrm
+#   script:
+#     - echo "部署到CRM 项目"
+#     - export PROJECT_NAME=HCRM
+#     - export SUPER_MODEL_SUPER_WEB_API=http://hcrm_super_api.honray.cc/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./inner.sh 
+#     - echo "成功到CRM项目"
+#   only:
+#   - config
+
+# 部署电力项目评审:
+#   stage: hpower
+#   script:
+#     - echo "部署到电力项目评审"
+#     - export PROJECT_NAME=HPOWER
+#     - export SUPER_MODEL_SUPER_WEB_API=http://hpower_super_api.ruizhutech.com/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+#     - echo "成功部署到外网服务器"
+#   only:
+#   - config
+
+# 部署信保系统:
+#   stage: hxinbao
+#   script:
+#     - echo "部署到信保系统上"
+#     - export PROJECT_NAME=HXINBAO
+#     - export SUPER_MODEL_SUPER_WEB_API=http://hxinbao_super_api.ruizhutech.com/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+#   only:
+#   - config
+
+# 部署项目预算财务系统:
+#   stage: hbudget
+#   script:
+#     - echo "部署项目预算财务系统"
+#     - export PROJECT_NAME=HBUDGET
+#     - export SUPER_MODEL_SUPER_WEB_API=http://hbudget_super_api.ruizhutech.com/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+#   only:
+#   - config
+
+# 部署新协力系统:
+#   stage: hcombine
+#   script:
+#     - echo "部署到订单服务器上"
+#     - export PROJECT_NAME=HCOMBINE
+#     - export SUPER_MODEL_SUPER_WEB_API=https://hcombineapi.ruizhutech.com/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+#   only:
+#   - config
+
+# 部署旅游系统:
+#   stage: htravel
+#   script:
+#     - echo "部署到旅游服务器"
+#     - export PROJECT_NAME=HTRAVEL
+#     - export SUPER_MODEL_SUPER_WEB_API=http://htravel_super_api.ruizhutech.com/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+#     - echo "成功部署到外网服务器"
+#   only:
+#   - config
+
+# 部署孵化器系统:
+#   stage: hincubator
+#   script:
+#     - echo "部署到孵化器项目"
+#     - export PROJECT_NAME=HINCUBATOR
+#     - export SUPER_MODEL_SUPER_WEB_API=http://hincubator_super_api.ruizhutech.com/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+#     - echo "成功部署到外网服务器"
+#   only:
+#   - config
+
+# 部署订单系统:
+#   stage: horder
+#   script:
+#     - echo "部署到订单服务器上"
+#     - export PROJECT_NAME=HORDER
+#     - export SUPER_MODEL_SUPER_WEB_API=http://horder_super_api.ruizhutech.com/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+#   only:
+#   - config
+
+# 部署植保系统:
+#   stage: hplant
+#   script:
+#     - echo "部署到植保系统上"
+#     - export PROJECT_NAME=HPLANT
+#     - export SUPER_MODEL_SUPER_WEB_API=http://hplant_super_api.ruizhutech.com/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+#   only:
+#   - config
+
+# 部署订餐系统:
+#   stage: hmeal
+#   script:
+#     - echo "部署到订餐系统上"
+#     - export PROJECT_NAME=HMEAL
+#     - export SUPER_MODEL_SUPER_WEB_API=http://hmeal_super_api.ruizhutech.com/
+#     - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+#   only:
+#   - config
+  
+部署 QC 分支:
+  stage: qc
+  script:
+    - echo "部署 QC 分支到内网"
+    - export PROJECT_NAME=QC
+    - export SUPER_MODEL_SUPER_WEB_API=http://qc_super_api.honray.cc/
+    - cd /home/gitlab-runner/common/frontend/duplication && ./inner.sh 
+    - echo "成功到 QC 分支"
+  only:
+  - qc
+
+部署 Master 测试:
+  stage: master
+  script:
+    - echo "部署到外网系统"
+    - export PROJECT_NAME=MASTER
+    - export SUPER_MODEL_SUPER_WEB_API=http://master_super_api.ruizhutech.com/
+    - cd /home/gitlab-runner/common/frontend/duplication && ./duplication.sh
+  only:
+  - master

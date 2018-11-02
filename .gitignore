@@ -1,0 +1,9 @@
+dist
+node_modules
+.DS_Store
+*.back
+/.vscode
+.element-variables
+src/components/Self
+npm-debug.log
+._.DS_Store

@@ -1,0 +1,257 @@
+/*.top-menu:hover {*/
+  /*cursor: pointer;*/
+  /*background: #324057;*/
+  /*!*color: #20a0ff;*!*/
+/*}*/
+.top-menu:active {
+  color: #20a0ff;
+}
+.top-active {
+  color: #20A0FF;
+  font-weight: 600;
+}
+.top-menu, .left-menu, .flow-menu, .cate, .flod {
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  -ms-user-select:none;
+  cursor: pointer;
+}
+/*.left-menu:hover {
+  background: #42566C;
+}*/
+.pages {
+  position: absolute;
+  top: 20px;
+  right: -5px;
+}
+.btn-link,.btn-link-large {
+  display: inline-block;
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  margin-right: 10px;
+  padding: 7px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.btn-link-large {
+  margin: 0;
+  padding: 11px 15px;
+  font-size: 14px;
+}
+.add-btn {
+  background: #0ec233
+}
+.add-btn:hover {
+  background: #27c848
+}
+.add-btn:active {
+  background: #0dae2e
+}
+.edit-btn {
+  background: #339df7
+}
+.edit-btn:hover {
+  background: #5bb1fa
+}
+.edit-btn:active {
+  background: #047ce2
+}
+.user-menu {
+  position: absolute;
+  top: 0px;
+  right: 100px;
+}
+/* 404icon */
+.icon-error {
+    background-image: url(../images/404.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* 流程icon */
+.icon-finance {
+    background-image: url(../images/finance.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-legal {
+    background-image: url(../images/Legal.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-office {
+    background-image: url(../images/office.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-package {
+    background-image: url(../images/package.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-personnel {
+    background-image: url(../images/personnel.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-project {
+    background-image: url(../images/project.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-referral {
+    background-image: url(../images/referral.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-replenish {
+    background-image: url(../images/replenish.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-statement {
+    background-image: url(../images/statement.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-supplier {
+    background-image: url(../images/supplier.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-addFlow{
+  background-image: url(../images/addFlow.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.icon-tender {
+    background-image: url(../images/tender.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-mystart {
+    background-image: url(../images/mystart.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.active-icon-mystart {
+    background-image: url(../images/mystartActive.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-follow {
+    background-image: url(../images/follow.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.active-icon-follow {
+    background-image: url(../images/followActive.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-myFlow {
+    background-image: url(../images/myFlow.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.active-icon-myFlow {
+    background-image: url(../images/myFlowActive.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-addFlow {
+    background-image: url(../images/addFlow.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.active-icon-addFlow {
+    background-image: url(../images/addFlowActive.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-data {
+    background-image: url(../images/data.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.active-icon-data {
+    background-image: url(../images/dataActive.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/*左侧菜单滑动条样式美化*/
+/**
+  ** webkit内核
+**/
+#leftMenu::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+#leftMenu::-webkit-scrollbar-button {
+    background-color: #0B111A;
+}
+#leftMenu::-webkit-scrollbar-track {
+    background: #0B111A;
+}
+#leftMenu::-webkit-scrollbar-track-piece {
+    /*background: url(http://www.lyblog.net/wp/wp-content/themes/mine/img/stripes_tiny_08.png);*/
+}
+#leftMenu::-webkit-scrollbar-thumb {
+    background: #1D2531;
+    border-radius: 4px;
+}
+#leftMenu::-webkit-scrollbar-corner {
+    background: #0B111A;
+}
+#leftMenu::-webkit-scrollbar-resizer {
+    background: #1D2531;
+}
+
+/**
+  ** IE内核
+**/
+#leftMenu::scrollbar-track-color {
+    background: #0B111A;
+}
+#leftMenu::scrollbar-arrow-color {
+    background-color: #0B111A;
+}
+#leftMenu::scrollbar-shadow-color {
+    background-color: #0B111A;
+}
+#leftMenu::scrollbar-face-color {
+    background: #1D2531;
+    border-radius: 4px;
+}
+
+.btn-wrapper {
+  margin-right: 5px;
+}
+.btn-wrapper + .btn-wrapper {
+  margin-left: 5px;
+}
+.btn-wrapper:last-child {
+  margin-right: 0;
+}
+
+.tit{
+  position: absolute;
+  top: -11px;
+  background: #f1f2f7;
+}
+
+.form-item {
+  font-size: 14px;
+  color: #48576a;
+}
+.notify-item {
+  cursor: pointer;
+  margin-top: 30px;
+}
